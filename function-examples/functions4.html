@@ -12,7 +12,7 @@
     <script>
         "use strict"; // ES5/ES6 literal to invoke Strict Mode
         
-        // #1 - a & b here are in "script scope" because they are declared outside of a block
+        // #1 - a & b here are in "script scope" because they are declared outside of a block var is global across script blocks if on global level. let is script level only
         let A = "A";
         let B = "B";
 
