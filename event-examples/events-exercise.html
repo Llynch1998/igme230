@@ -26,6 +26,7 @@
 		#colorform legend{ 
 			font-weight:bold;
 			font-size:1.2em;
+			color: black;
 		}
 	</style>
 </head>
@@ -42,6 +43,25 @@
 
 <script>
 /* Write your code here! */
+
+let radioQ = document.querySelectorAll('#colorform > p > input');
+let textBox = document.querySelector('#colorform > #info');
+let button = document.querySelector('#colorform > p> button');
+let legend = document.querySelector('#colorform > legend');
+let currentVal;
+function radioClicked() {
+    textBox.innerHTML = "You have selected the color " + this.value;
+	currentVal = this.value;
+} 
+function buttonClicked(){
+	textBox.innerHTML = "Your FINAL CHOICE is " + currentVal;
+	legend.style.color = currentVal;
+}
+for(let i = 0; i < radioQ.length; i++){
+	radioQ[i].addEventListener("click", radioClicked);
+}
+button.addEventListener("click", buttonClicked);
+console.log(radioQ);
 </script>
 </body>
 </html>
