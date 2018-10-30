@@ -48,13 +48,13 @@
             document.getElementById("foodsList").appendChild(newFood);
         } 
         */
-        function createList(listElement, array){
-            for(let i = 0; i< 3; i++){
+        function createList(listElement, array){//redone with new syntax introduced by liz
+            for(let value of array){//goes through each item in the array
             let newItem = document.createElement("li");
-            let itemText = document.createTextNode(array[i]);
-            newItem.appendChild(itemText);
-            document.getElementById(listElement).appendChild(newItem);
-        } 
+            newItem.innerHTML = value;//takes the item from the array in order from 0-length
+            
+            document.querySelector("#" + listElement).appendChild(newItem);//finds the list to add to and adds the array value
+        } //need the # to find the object being referenced
         
         }
         createList("colorsList", colors);
