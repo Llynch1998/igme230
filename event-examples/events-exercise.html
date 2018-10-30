@@ -44,7 +44,7 @@
 <script>
 /* Write your code here! */
 
-let radioQ = document.querySelectorAll('#colorform > p > input');
+let radioQ = document.querySelectorAll('#colorform > p > input[name="colorGroup"]');//[]makes it select the input with specific value
 let textBox = document.querySelector('#colorform > #info');
 let button = document.querySelector('#colorform > p> button');
 let legend = document.querySelector('#colorform > legend');
@@ -61,7 +61,7 @@ for(let i = 0; i < radioQ.length; i++){
 	radioQ[i].addEventListener("click", radioClicked);
 }
 button.addEventListener("click", buttonClicked);
-console.log(radioQ);
+
 </script>
 </body>
 </html>
