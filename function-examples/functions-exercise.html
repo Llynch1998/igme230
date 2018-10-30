@@ -49,11 +49,12 @@
         } 
         */
         function createList(listElement, array){//redone with new syntax introduced by liz
+            let list = document.querySelector("#" + listElement);
             for(let value of array){//goes through each item in the array
             let newItem = document.createElement("li");
             newItem.innerHTML = value;//takes the item from the array in order from 0-length
             
-            document.querySelector("#" + listElement).appendChild(newItem);//finds the list to add to and adds the array value
+            list.appendChild(newItem);//finds the list to add to and adds the array value
         } //need the # to find the object being referenced
         
         }
