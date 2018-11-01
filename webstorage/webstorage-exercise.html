@@ -50,6 +50,8 @@
     const storedName = localStorage.getItem(nameKey);
     const storedColor = localStorage.getItem(colorKey);
 
+    const body = document.querySelector("body");
+    body.style.backgroundColor = storedColor;
     // if we find a previously set name value, display it
     if (storedName) {
         nameField.value = storedName;
