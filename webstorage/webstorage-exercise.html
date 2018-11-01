@@ -69,7 +69,7 @@
     // when the user changes their name or color, update localStorage
     nameField.onchange = e => { localStorage.setItem(nameKey, e.target.value); };
     colorSelect.onchange = e => { localStorage.setItem(colorKey, e.target.value); 
-        body.style.backgroundColor = storedColor;};
+        body.style.backgroundColor = e.target.value;};
     
 
 </script>
