@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <title>Wyatt Lynch Portfolio</title>
     <link rel="stylesheet" href="proj2.css">
+    <!-- Using below reference for the hamburger icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -15,7 +17,7 @@
             <a href="#home" class="active">Home</a>
             <a href="#news">Portfolio</a>
             <a href="#contact">Resume</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <a href="javascript:void(0);" class="icon" onclick="navBar()">
               <i class="fa fa-bars"></i>
             </a>
           </div>
@@ -23,9 +25,9 @@
           
           
           <script>
-          function myFunction() {
+          function navBar() {
               var x = document.getElementById("myTopnav");
-              if (x.className === "topnav") {
+              if (x.className == "topnav") {
                   x.className += " responsive";
               } else {
                   x.className = "topnav";
