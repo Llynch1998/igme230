@@ -1,0 +1,40 @@
+html, body{/* resets the html so there is no base padding or margin*/
+    margin:0;
+    padding: 0;
+}
+#mygrid{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;/* defines width/hieght for all 3 rows*/
+    grid-template-columns: 1fr 1fr 1fr;/* defines width/hieght for all 3 columns*/
+    width: 100vw;
+    height: 100vh;
+    max-width: 90%;
+}
+/* 1fr uses a fraction of the AVAILABLE SPACE to designate the size*/
+#mygrid div{/*selects div inside of grid*/
+    display: flex;
+    justify-content: center;/*centers for width*/
+    align-items: center;/*centers for height*/
+    background-color: beige;
+    border: 1px dotted black;
+    
+    
+}
+
+#mygrid .headerbar{
+    grid-column-start: 1;/*Starts at the first line in the grid*/
+    grid-column-end: -1;/*goes to the last column*/
+    /*grid-row: 1/ span 2;makes it take 2 rows worth of space*/
+    background-color: black
+}
+#backgroundContainer{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#mygrid #three, #mygrid #six{
+    background-color: black;
+}
