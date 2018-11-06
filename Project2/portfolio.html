@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="portfolioCSS.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+        <header>
+                <h1>Wyatt Lynch</h1>
+            </header>
+        <div class="topnav" id="myTopnav">
+                <a href="https://llynch1998.github.io/igme230/Project2/project2.html" class="active">Home</a>
+                <a href="https://llynch1998.github.io/igme230/Project2/portfolio.html">Portfolio</a>
+                <a href="https://llynch1998.github.io/igme230/Project2/resume.html">Resume</a>
+                <a href="javascript:void(0);" class="icon" onclick="navBar()">
+                  <i class="fa fa-bars"></i>
+                </a>
+              </div>
+              
+              <table>
+                    <tr>
+                        <th><h3>Images</h3></th>
+                        <th><h3>Projects</h3></th>
+                    </tr>
+                    <tr>
+                        <td><img src="04LawrenceLynch_Abs05.jpg" width="450" height="300"></td>
+                        <td>One of my first Digital photography assignments! We had to find objects and get up close in order to almost mask exactly what it was, while showing a piece of an object!</td>
+                    </tr>
+                    <tr>
+                        <td><img src="07LawrenceLynch_InYourFace.jpg"width="450" height="300"></td>
+                        <td>This photo was taken as part of an assignment called In your face. The goal was to take portrait photo's of workers in their main position of their every day life. This particular man was running a blacksmithing shop in which he sold things he made himself. Over all, he was light hearted and easy to talk to, almost the polar opposite of his dark and heavy creations.</td>
+                    </tr>
+                    <tr>
+                        <td><img src="08LawrenceLynch_InYourFace.jpg"width="300" height="450"></td>
+                        <td>This photo was taken as part of an assignment called In your face. The goal was to take portrait photo's of workers in their main position of their every day life. The woman in the picture was involved in running some sort of Bakery.</td>
+                    </tr>
+                    <tr>
+                        <td><img src="10LawrenceLynch_InYourFace.jpg"width="450" height="300"></td>
+                        <td>This photo was taken as part of an assignment called In your face. The goal was to take portrait photo's of workers in their main position of their every day life. This man was involved in a local Distillery, unlike the way his photo presents him, he was an extremely friendly man.</td>
+                    </tr>
+                </table>
+              
+              
+              <script>
+              function navBar() {
+                  var x = document.getElementById("myTopnav");
+                  if (x.className == "topnav") {
+                      x.className += " responsive";
+                  } else {
+                      x.className = "topnav";
+                  }
+              }
+              </script>
+    
+</body>
+</html>

@@ -5,6 +5,38 @@
     <meta charset="UTF-8">
     <title>Wyatt Lynch Portfolio</title>
     <link rel="stylesheet" href="proj2.css">
+    <!-- Using below reference for the hamburger icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
+<body>
+    <header>
+        <h1>Wyatt Lynch</h1>
+    </header>
+    <div class="topnav" id="myTopnav">
+            <a href="https://llynch1998.github.io/igme230/Project2/project2.html" class="active">Home</a>
+            <a href="https://llynch1998.github.io/igme230/Project2/portfolio.html">Portfolio</a>
+            <a href="https://llynch1998.github.io/igme230/Project2/resume.html">Resume</a>
+            <a href="javascript:void(0);" class="icon" onclick="navBar()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+          
+          
+          
+          <script>
+          function navBar() {
+              var x = document.getElementById("myTopnav");
+              if (x.className == "topnav") {
+                  x.className += " responsive";
+              } else {
+                  x.className = "topnav";
+              }
+          }
+          </script>
+    <main>
+        <img src="profile.jpg" alt="A stand in image till I take a better one.">
+        <p id="about">Hello! I'm Wyatt Lynch and I am a New Media Interactive Development Major at RIT. As a New Media Interactive Major, I'm constantly trying to create new and interesting projects to play with. With my time at RIT,, I've learned a lot about the principles of design, in addition to Javascript, C#, and some html and CSS. However, before my time at RIT, I attended a Community College called TC3. There, I obtained an Associates of Science in New Media. This degree included everything from charcoal drawings to game design and animation. A lot of my experience from TC3 shapes my work to this day, as I am always looking for a new way to do something different.</p>
+    </main>
+</body>
 </html>
