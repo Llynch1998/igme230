@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Thursday In Class</title>
+    <style>
+        #navpanel{
+            background-color: #CCDDFF;
+            width: 20vw;
+            height: 20vh;
+        }
+        #panelTwo{
+            background-color: antiquewhite;
+            width: 20vw;
+            height: 20vh;
+        }
+        #panelThree{
+            background-color: bisque;
+            width: 20vw;
+            height: 20vh;
+        }
+    </style>
+    
+</head>
+<body>
+    <button id="show">Show</button>
+    <button id="hide">Hide</button>
+    <button id="toggleFade">Fade Toggle</button>
+    <button id="toggle">Toggle</button>
+    <button id="toggleSlide">Slide Toggle</button>
+    <div id="navpanel">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>I Fade!</li>
+        </ul>
+    </div>
+    <div id="panelTwo">
+        <p>This is my paragraph to demo the toggle function</p>
+    </div>
+    <div id="panelThree">
+            <p>This is my paragraph to demo slide! Click me to make me slide away! The button up top will toggle me!</p>
+        </div>
+    <script>
+        $("#hide").click(function()
+        {
+            $("#navpanel").hide("slow");// can use keywords slow and fast to direct timing
+        });
+        $("#show").click(function()
+        {
+            $("#navpanel").show(2500);//uses milliseconds for timing
+        });
+        $("#toggle").click(function(){
+            $("#panelTwo").toggle("fast");//Toggle does the work of hide and show. 
+        //follows same keyword/millisecond structure
+        });
+        $("#toggleFade").click(function(){
+            $("#navpanel").fadeToggle("slow");
+        });
+        $("#panelThree").click(function(){
+            $("#panelThree").slideToggle("slow");
+        });
+        $("#toggleSlide").click(function(){
+            $("#panelThree").slideToggle("slow");
+        });
+    </script>
+</body>
+</html>
