@@ -112,7 +112,7 @@
      const numRows = 10;//Sets the amount of Rows
      const cellSize = 25;// Sets the Cell size for the rows&Columns
      const numCells = numCols * numRows;//Counts how many cells
-    
+    let color = "red";
     const grid = document.querySelector("#pixelGrid");
     
     grid.style.gridTemplateRows = `repeat(${numRows}, ${cellSize}px)`;
@@ -126,10 +126,22 @@
     color = $(this).val();  
     console.log(color);  
     });
-    $("span").click(function () { 
+    $(".cell").click(function () { 
         $(this).css("background-color", color);
+    }); 
+    $(".cell").mousedown(function () {
+        event.preventDefault(); //stops typical click and drag item behavior
+    $(this).css("background-color", color);//sets the background color to whatever current selection is on initial
+    $(".cell").mouseover(function () {
+            $(this).css("background-color", color);
+        });
     });
-    
+    $(document).mouseup(function () {
+        $(".cell").unbind("mouseover");
+    });
+    $("#reset").click(function () { 
+        $(".cell").css("background-color", "#ccc");
+    });
     </script>
 </body>
 
