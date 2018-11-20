@@ -122,12 +122,12 @@
      for(let i = 0; i < numCells; i++){
         $("#pixelGrid").append('<span class="cell"></span>');
      }
-     $("#colorChooser").change(function () { 
+     $("#colorChooser").change(function () { //sets color based on selector value
     color = $(this).val();  
     console.log(color);  
     });
     $("span").click(function () { 
-        $(this).css("background-color", color);
+        $(this).css("background-color", color);//selects each span as this and sets background
     });
     
     </script>
