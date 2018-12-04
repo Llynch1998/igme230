@@ -44,5 +44,25 @@ Your Formatting
     max-width: 1200px;
     min-height: 100vh;
     grid-template-rows: 4rem auto 3rem;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 200px;
+}
+header{
+    
+    grid-column: 1/5;
+}
+footer{
+    grid-column: 1/5;
+}
+header, footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menuitem{
+    background-color: white;
+}
+.submenu{
+    list-style-type: none; /*https://www.w3schools.com/css/css_list.asp*/
+    margin: 0;
+    padding: 0;
 }
