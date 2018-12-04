@@ -43,6 +43,6 @@ Your Formatting
     width: 90vw;
     max-width: 1200px;
     min-height: 100vh;
-    grid-template-rows: 4rem 100% 3rem;
+    grid-template-rows: 4rem auto 3rem;
     grid-template-columns: 1fr 1fr 1fr;
 }
