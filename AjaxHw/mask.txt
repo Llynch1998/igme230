@@ -1,0 +1,17 @@
+<p id="verse1">We wear the mask that grins and lies,<br>
+It hides our cheeks and shades our eyes,—<br>
+This debt we pay to human guile;<br>
+With torn and bleeding hearts we smile,<br>
+And mouth with myriad subtleties.<br></p>
+
+<p id="verse2">Why should the world be over-wise,<br>
+In counting all our tears and sighs?<br>
+Nay, let them only see us, while<br>
+We wear the mask.</p>
+
+<p id="verse3">We smile, but, O great Christ, our cries<br>
+To thee from tortured souls arise.<br>
+We sing, but oh the clay is vile<br>
+Beneath our feet, and long the mile;<br>
+But let the world dream otherwise,<br>
+We wear the mask!<br></p>
