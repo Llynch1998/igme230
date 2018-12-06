@@ -43,32 +43,34 @@ Your Formatting
     width: 90vw;
     max-width: 1200px;
     min-height: 100vh;
+     
     grid-template-rows: 4rem auto 3rem;
     grid-template-columns: 1fr 2fr 200px;
+    grid-template-areas:
+    "head head head"
+    "aside article nav"
+    "footer footer footer";
 }
-header{
-    
-    grid-column: 1/5;
+#wrapper > header{/*sets up a "name" for use in the grid template areas function. used in media screen*/
+    grid-area: head;
 }
-footer{
-    grid-column: 1/5;
+#wrapper > nav{
+    grid-area: nav;
 }
+#wrapper > aside{
+    grid-area: aside;
+}
+#wrapper > article{
+    grid-area: article;
+}
+#wrapper > footer{
+    grid-area: footer;
+}
+
 header, footer{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-aside{
-    grid-column: 1;
-    grid-row: 2; 
-}
-nav{
-    grid-column: 3;
-    grid-row: 2;
-}
-article{
-    grid-column: 2;
-    grid-row: 2;
 }
 .menuitem{
     background-color: white;
@@ -84,4 +86,19 @@ article{
     padding-left: .25rem;
     background-color: lightgrey;
     
+}
+
+@media screen and (max-width: 640px){
+    #wrapper{
+        width: 100vw;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:/*sets up a grid using the area names*/
+        "head"
+        "nav"
+        "article"
+        "aside"
+        "footer";
+    }
+
 }
