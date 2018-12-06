@@ -40,5 +40,81 @@ Your Formatting
     max-width: 1000px;
     margin: auto; /*https://www.w3schools.com/css/css_align.asp for this solution to centering*/
     min-height: 100vh;
-    grid-template-rows: 1fr;
+    grid-template-rows: 75px 30px 1fr 50px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "head head"
+    "art nav"
+    "art aside"
+    "foot foot"
+}
+#yourgrid > header{
+    grid-area: head;
+}
+#yourgrid > aritcle{
+    grid-area: art;
+}
+#yourgrid > nav{
+    grid-area: nav;
+}
+#yourgrid > aside{
+    grid-area: aside;
+}
+#yourgrid > footer{
+    grid-area: foot;
+}
+header, footer{
+    background-color: lightpink;
+}
+header, footer, nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+article{
+    background-color: lightcyan;
+}
+aside{
+    background-color: lightblue;
+}
+nav{
+    background-color: lavenderblush;
+    
+    
+    
+}
+.items{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+}
+.items li{
+    padding: .25rem;
+    background-color: #ddd;
+    position: relative;
+}
+.menu{
+    display: flex;
+    justify-content: center;
+    width: 6rem;
+    background-color: #ccc;
+    padding: 10 10 10 10;
+    margin: 10 10 10 10;
+}
+div{
+}
+
+@media screen and (max-width: 600px){
+    #yourgrid{
+        width: 100vw;
+        grid-template-rows: 75px 30px auto auto 30px;
+        grid-template-columns: 100vh;
+        grid-template-areas: 
+        "head"
+        "nav"
+        "art"
+        "aside"
+        "foot";
+    }
 }
