@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="polling.css">
+    <script src="polling.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="anime.min.js"></script>
+
+    <title>Polling</title>
+</head>
+<body>
+    <div id="grid">
+        <div id="bar">
+            <h1>This is the nav bar</h1>
+        </div>
+        <div id="Question">
+            <h2>This is the question being asked</h2>
+        </div>
+        <div id="A1" class="choice">
+            <h3>This is the first answer</h3>
+        </div>
+        <div id="A2" class="choice">
+            <h3> this is the second answer</h3>
+        </div>
+        <footer><p>Thanks for using</p></footer>
+        
+    </div>
+    <script>
+        $(".choice").mouseover(function(){
+            var A1 = anime({
+            targets: this,
+            duration: 500,
+            scale: 1.2,
+            easing: "easeInQuad"
+        })});
+        $(".choice").mouseout(function(){
+            var A1 = anime({
+            targets: this,
+            duration: 500,
+            scale: 1,
+            easing: "easeInQuad"
+        })});
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+*{
+    box-sizing: border-box;
+}
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+#grid{
+    display: grid;
+    min-height: 100vh;
+    min-width: 100vw;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 4rem 50vh 1fr 50px;
+    grid-template-areas: 
+        "navbar navbar navbar navbar"
+        ". qBox qBox ."
+        ". Answer1 Answer2 ."
+        "footer footer footer footer";
+}
+h2{
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+#bar{
+    background-color: gray;
+    grid-area: navbar;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Question{
+    background-color: lightgray;
+    margin: 50px;
+    grid-area: qBox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#A1, #A2{
+    background-color: darkgray;
+    grid-area: Answer1;
+    margin: 0 25px 100px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#A2{
+    background-color: darkgray;
+    grid-area: Answer2;
+    margin: 0 100px 100px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer{
+    background-color: gray;
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    
+}

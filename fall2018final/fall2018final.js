@@ -11,4 +11,4 @@ $(".menu").click(function()
         $("#choose-content").change(function() {//sets up on change event
             content = $(this).val();//grabs current value
             $("#content").load(content); //loads current menu val
-        
+        });
