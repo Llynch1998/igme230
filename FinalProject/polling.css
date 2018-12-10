@@ -44,9 +44,11 @@ h2{
     justify-content: center;
     align-items: center;
 }
-#A1, #A2{
+#A1{
     background-color: darkgray;
     grid-area: Answer1;
+    width: 15vw;
+    height: 15vw;
     margin: 0 25px 100px 100px;
     display: flex;
     justify-content: center;
@@ -55,6 +57,8 @@ h2{
 #A2{
     background-color: darkgray;
     grid-area: Answer2;
+    width: 15vw;
+    height: 15vw;
     margin: 0 100px 100px 25px;
     display: flex;
     justify-content: center;
