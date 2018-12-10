@@ -1,3 +1,5 @@
+let question = "q1.txt";
+$("#Question").load(question);
 $(".choice").mouseover(function(){
     anime.remove(this);//this removes the previous animation so no error occurs
     anime({//this starts the anime animation 
@@ -9,7 +11,7 @@ $(".choice").mouseover(function(){
     } , //this controls how much bigger the item gets
     elasticity: 400
 })});
-$(".choice").mouseout(function(event){//repeats the above animation but shrinks when the mouse leaves the item
+$(".choice").mouseout(function(){//repeats the above animation but shrinks when the mouse leaves the item
     e = event.toElement || event.relatedTarget;//found on stack overflow
     if (e.parentNode == this || //checks to see if the element being hovered on is a child, if so it does nothing
                            e == this) {//stops the animation error when hovering over text
@@ -25,7 +27,7 @@ $(".choice").mouseout(function(event){//repeats the above animation but shrinks 
       });
 });
 let changed = false;
-$("#burgerbox").click(function(){
+$("#burgerbox").click(function(){//when hamburger menu clicked changes color and makes the drop down display
     anime.remove("#burgerborder");
     if(changed == false){
         anime({
@@ -44,9 +46,96 @@ $("#burgerbox").click(function(){
     $("ul").slideToggle();
     
 });
-$("li").mouseover(function(){
+$("li").mouseover(function(){//changes menu option color on hover
     this.style.backgroundColor = "#808080"
 });
-$("li").mouseout(function(){
+$("li").mouseout(function(){//changes when no longer hovering
     this.style.backgroundColor = "darkgray"
 })
+
+$("#A1").click(function (){
+    anime.remove("#A2");
+    anime({
+        targets:"#A2",
+        rotate: "1turn",
+        scale:2,
+        duration: 500,
+        easing: "easeInSine",
+        complete:function(){
+            anime({
+                targets: "#A2",
+                duration:300,
+                scale: 0,
+                rotate:{
+                    value: -1080,
+                    duration: 3000,
+                    
+                },
+                easing: "easeInQuad"
+                
+            })
+        }
+    })
+    
+});
+$("#A2").click(function (){
+    anime.remove("#A1");
+    anime({
+        targets:"#A1",
+        rotate: "1turn",
+        scale:2,
+        duration: 500,
+        easing: "easeInSine",
+        complete:function(){
+            anime({
+                targets: "#A1",
+                duration:300,
+                scale: 0,
+                rotate:{
+                    value: -1080,
+                    duration: 3000,
+                    
+                },
+                easing: "easeInQuad"
+                
+            })
+        }
+    })
+    
+});
+question = "q1.txt";
+$("#Question").load(question);
+$("li").click(function(){
+    if($(this).attr("id") == "q1"){
+        $("#Question").load("q1.txt");
+        anime.remove("#A1");
+        anime.remove("#A2");
+        anime({ 
+            targets: ["#A1", "#A2"],
+            duration:0,
+            scale:1
+        })
+    }
+    else if($(this).attr("id") == "q2"){
+        $("#Question").load("q2.txt");
+        anime.remove("#A1");
+        anime.remove("#A2");
+        anime({ 
+            targets: ["#A1", "#A2"],
+            duration:0,
+            scale:1
+        })
+    }
+    else if($(this).attr("id") == "q3"){
+        $("#Question").load("q3.txt");
+        anime.remove("#A1");
+        anime.remove("#A2");
+        anime({ 
+            targets: ["#A1", "#A2"],
+            duration:0,
+            scale:1
+        })
+    }
+    
+    
+});

@@ -25,6 +25,9 @@ body{
 #bar{
     background-color: gray;
     grid-area: navbar;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
 #Question{
@@ -74,49 +77,18 @@ footer{
     display: flex;
     justify-content: center;
 }
-#burger{
-    width: 35px;
-    height: 5px;
-    background-color: white;
-    margin: 6px 0;
-}
-#burgerborder{
-    margin: 10px 10px;
-    padding: 4px 5px 5px 5px;
-    width: 45px;
-    height: 45px;
-    background-color: #808080;
-    position: absolute;
-    /*background-color: #383838;  the color for when clicked*/
-}
-
-ul {
-    list-style-type: none;
-    margin: 10px 10px 10px 10px;
-    padding: 0;
-    background-color: darkgray;
-    width: 100px;
-    display: none;
-}
-li{
-    margin: 10px 10px 10px 0;
-    background-color: darkgray;
-    width: 100px;
-}
-li:hover{
-    background-color: "#202020";
-}
 #mobile{
-    display: none;
+    display: flex;
+    visibility: hidden;
 }
 @media screen and ( max-width: 600px){
     #grid{
         display: none;
     }
     #mobile{
-        display: block;
         margin: 10px 10px 10px 10px;
-        
-        
+        justify-content: center;
+        align-items: center;
+        visibility: visible;
     }
 }
