@@ -53,6 +53,7 @@ h2{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px 10px;
 }
 #A2{
     background-color: darkgray;
@@ -63,11 +64,11 @@ h2{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px 10px;
 }
 footer{
     background-color: gray;
     grid-area: footer;
     display: flex;
     justify-content: center;
-    
 }
