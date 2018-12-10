@@ -1,8 +1,8 @@
 $(".choice").mouseover(function(){
     anime.remove(this);//this removes the previous animation so no error occurs
-    var A1 = anime({//this starts the anime animation 
+    anime({//this starts the anime animation 
     targets: this,//targets whichever optinon the person is over
-    
+    backgroundColor: "#bfff00",
     scale:{
         value: [1, 1.1],// the way to select the change of scale but only effect the scale duration
         duration: 300// this is the duration of the general animation
@@ -16,10 +16,37 @@ $(".choice").mouseout(function(event){//repeats the above animation but shrinks 
         return;//returns nothing so it won't execute the following animation causing a stutter
     }
     anime.remove(this);
-    var A1 = anime({
+    anime({
         targets: this,
         scale: 1,//base input for scale to return to original size
         duration: 300,//if outside sets duration for entire ani
+        backgroundColor: "#000000",
         elasticity: 400
       });
 });
+let changed = false;
+$("#burgerbox").click(function(){
+    anime.remove("#burgerborder");
+    if(changed == false){
+        anime({
+            targets: "#burgerborder",
+            backgroundColor: "#000000"
+          }); 
+          changed = true; 
+    }
+    else if(changed == true){
+        anime({
+            targets: "#burgerborder",
+            backgroundColor: "#808080"
+          });
+          changed = false;
+    }
+    $("ul").slideToggle();
+    
+});
+$("li").mouseover(function(){
+    this.style.backgroundColor = "#808080"
+});
+$("li").mouseout(function(){
+    this.style.backgroundColor = "darkgray"
+})
