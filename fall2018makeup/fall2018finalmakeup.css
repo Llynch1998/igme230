@@ -90,9 +90,8 @@ footer{
     justify-content: center;
     align-items: center;
 }
-.submenu{/*hides the submenu on load and makes it so when clicked the page doesn't move for mobile*/
+.submenu{/*hides the submenu on load */
     display: none;
-    position: absolute;
 }
 .submenu li:hover{
     background-color: lightpink;
