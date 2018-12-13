@@ -81,6 +81,7 @@ nav{
 #extracredit{
     grid-area: extra;
     background-color: white;
+    text-align: center;
     
 }
 footer{
