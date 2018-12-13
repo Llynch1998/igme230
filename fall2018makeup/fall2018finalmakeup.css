@@ -42,3 +42,79 @@ section, header, footer {
 /**************
 Your Formatting
 ***************/
+body{
+    display: flex;
+    justify-content: center;
+}
+#pagegrid{
+    width: 95vw;
+    max-width: 1100px;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 200px 2fr 1fr;
+    grid-template-rows:80px 1fr 1fr 30px;
+    grid-template-areas: 
+    "head head head"
+    "nav story source"
+    "nav story extra"
+    "foot foot foot"  
+}
+header{
+    grid-area: head;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav{
+    grid-area: nav;
+    background-color: lavenderblush;
+}
+#story{
+    grid-area:story; 
+    background-color: lightcyan;
+}
+#source{
+    grid-area: source;
+    background-color: lightsalmon;
+}
+#extracredit{
+    grid-area: extra;
+    background-color: white;
+    
+}
+footer{
+    grid-area: foot;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.submenu{
+    display: none;
+    position: absolute;
+}
+.submenu li:hover{
+    background-color: lightpink;
+    color: magenta;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px){
+    body{/*When this isn't here every time a button is clicked the entire screen bugs out. found the tip on fixing this here https://stackoverflow.com/questions/40480144/removing-flex-in-css-for-mobile-size-screens*/
+        display: block;
+    }
+    #pagegrid{
+        width: 100vw;
+        grid-template-columns:1fr;/*Wasn't sure if not having a column here would cause an error*/
+        grid-template-rows:80px auto auto auto auto 30px;
+        grid-template-areas: 
+        "head"
+        "story"
+        "source"
+        "extra"
+        "nav"
+        "foot"  
+    }
+
+}
