@@ -1,0 +1,122 @@
+*{
+    box-sizing: border-box;
+}
+html,
+body {/*clears margins and padding for alignment purposes*/
+    padding: 0;
+    margin: 0;
+}
+body{/*centers my grid*/
+    display: flex;
+    justify-content: center;
+}
+#grid{/*grid to contain all visible elements*/
+    display: grid;
+    min-height: 100vh;
+    min-width: 100vw;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 4rem 50vh 1fr 50px;
+    grid-template-areas: 
+        "navbar navbar navbar navbar"
+        ". qBox qBox ."
+        ". Answer1 Answer2 ."
+        "footer footer footer footer";
+}
+#bar{/*bar on top of screen */
+    background-color: gray;
+    grid-area: navbar;
+    
+}
+#Question{/*the box containing the questions being asked*/
+    background-color: lightgray;
+    margin: 50px;
+    min-width: 500px;
+    min-height: 300px;
+    grid-area: qBox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h3{/*the yes and no options text*/
+    font-size: 70pt;
+    color: lightgray;
+}
+
+#A1{/*yes button*/
+    background-color: black;
+    grid-area: Answer1;
+    width: 15vw;
+    min-width: 150px;
+    min-height: 150px;
+    height: 15vw;
+    margin: 0 25px 100px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 50px;
+}
+#A2{/*no  button*/
+    background-color: black;
+    grid-area: Answer2;
+    width: 15vw;
+    min-width: 150px;
+    min-height: 150px;
+    height: 15vw;
+    margin: 0 100px 100px 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 50px;
+}
+footer{/*bottom bar*/
+    background-color: gray;
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+}
+#burgerbox div{/*the hamburger menu */
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+}
+#burgerborder{/*the box around the hamburger used to display a background*/
+    margin: 10px 10px;
+    padding: 4px 5px 5px 5px;
+    width: 45px;
+    height: 45px;
+    background-color: #808080;
+    position: absolute;
+    /*background-color: #383838;  the color for when clicked*/
+}
+
+ul {/*list containing the poll options*/
+    list-style-type: none;
+    margin: 10px 10px 10px 10px;
+    padding: 0;
+    background-color: darkgray;
+    width: 100px;
+    display: none;
+}
+li{/*the poll options*/
+    margin: 10px 10px 10px 0;
+    background-color: darkgray;
+    width: 100px;
+}
+li:hover{/*when the item is hovered over, it changes the background color*/
+    background-color: "#202020";
+}
+#mobile{/*used to display the mobile screen stating not valid for use on mobile*/
+    display: none;
+}
+@media screen and ( max-width: 600px){
+    #grid{
+        display: none;
+    }
+    #mobile{
+        display: block;
+        margin: 10px 10px 10px 10px;
+        
+        
+    }
+}
