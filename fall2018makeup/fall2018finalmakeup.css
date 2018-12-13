@@ -90,7 +90,7 @@ footer{
     justify-content: center;
     align-items: center;
 }
-.submenu{
+.submenu{/*hides the submenu on load and makes it so when clicked the page doesn't move for mobile*/
     display: none;
     position: absolute;
 }
